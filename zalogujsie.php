@@ -1,0 +1,46 @@
+<?php
+
+	session_start();
+
+	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
+	{
+		echo "<script type='text/javascript'>alert('Jesteś zalogowany!');</script>";
+		//header('Location: home.html');
+		exit();
+	}
+?>
+
+<DOCTYPE! html>
+
+<html lang="pl">
+<head>
+<title> Logowanie </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="formularz.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	
+
+</head>
+
+<body>
+	<div class="container1">
+			<div class="logowanie">
+				<form action="zaloguj.php" method="post">   <!-- PLIK PHP DO LOGOWANIA-->
+					Login: <br/> <input type="text" name="login" placeholder="login" required /> <br/> <br/>
+					Hasło: <br/> <input type="password" name="haslo" placeholder="hasło" required/> <br/> <br/>
+					<input type="submit" value="Zaloguj się"/>
+					<a href="rejestracja.html"><input type="button" value="Zarejestruj się"/></a>
+					
+				</form>
+			</div>	
+	</div>
+
+	<?php
+    	if(isset($_SESSION['blad']))    echo $_SESSION['blad'];
+	?>
+
+</body>
+
+</html>

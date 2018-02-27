@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title> FIRMA </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="styl.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	
+
+</head>
+
+<body>
+	<div id="szerokosc"></div>
+		<div class="container1">
+		 	<header>
+		 		<div class="logo">
+		 			<div class="col-sm-4 logo">
+		 				<img id="logo" src="logo2.jpg"/>
+		 			</div>
+		 		</div>
+
+                                <div class="burger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+		 		<div class="menu neddih">
+					<nav class="col-sm-8">
+						<ul>
+			       			<li><a class="active" href="#"> Home </a></li>
+			       			<li><a href="projects.html"> Projekty </a></li>
+			       			<li><a href="team.html"> Nasz Team </a></li>
+			       			<li><a href="faq.html"> FAQ </a></li>
+			       			<li><a href="regulamin.html"> Regulamin </a></li>
+			       			<li><a href="pierwszytatuaz.html"> Pierwszy tatuaż </a></li>
+			       			<li><a href="kontakt.html"> Kontakt </a></li>
+			       			<li><a class="przycisk" href="zalogujsie.php" role="button">Zaloguj się</a></li>
+			       			<li><a class="przycisk" href="profil_usera.php" role="button">Konto</a></li>
+		       			</ul>
+		 			</nav>
+		 		</div>
+
+		 	</header>
+
+		 	<main>
+				<section id="motyw"> 
+						<div class="motyw">
+							<h1 style="color:white; font-style:calibri"> Tattooed IT ! </h1>
+							<h3 style="color:white"> Wolne terminy </h3>
+							<a class="przycisk" href="zapiszsie.php" role="button">Zapisz się</a>
+							
+						</div>
+				</section>
+
+			</main>
+			
+			<footer><hr id="linia"/>
+				<p>&copy; PG 2017</p>
+			</footer>
+
+		</div>
+    <script>
+        var x = document.querySelector('.burger');
+x.addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('neddih');
+}, false);
+    </script>
+</body>
+</html>

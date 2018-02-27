@@ -1,0 +1,35 @@
+
+<DOCTYPE! html>
+
+<html lang="pl">
+<head>
+<title> Logowanie </title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script type="text/javascript" src='walidacja.js'></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="formularz.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	
+
+</head>
+
+<body>
+	<div class="container1">
+			<div class="logowanie">
+				<form action="zarejestruj.php" method="post" onsubmit="return validate(this);">   <!-- PLIK PHP DO LOGOWANIA-->
+					Adres e-mail: <br/> <input type="email" name="email" placeholder="email" required/> <br/> <br/>
+					Login: <br/> <input type="text" name="login" placeholder="login" required /> <br/> <br/>
+					Hasło: <br/> <input type="password" name="haslo" placeholder="hasło" required/> <br/> <br/>
+					Hasło 2: <br/> <input type="password" name="haslo2" placeholder="powtórz hasło" required /> <br/> <br/>
+					<div id="kap" class="g-recaptcha" name="captcha" data-sitekey="6LeEHyMUAAAAAI-ctxq53o7HIDleP6lAqXKrPWTj" required></div></br>
+					<input type="submit" value="Potwierdź" onClick="return validate(document.forms[0])" />					
+				</form>
+			</div>	
+	</div>
+	
+
+</body>
+
+</html>
